@@ -1,6 +1,81 @@
-let i = 0;
+/*let i = 0;
 
 while(i<100){
     i = i+5;
     console.log(i)
 }
+*/
+
+//while
+/*
+let numero = 5
+let fatorial = 5
+
+while (numero > 1){
+    console.log(fatorial)
+    numero = numero - 1
+    fatorial = fatorial * numero
+}
+*/
+
+//for
+/*
+for (let numero = 1; numero<=100; numero = numero + 5){
+    console.log(numero);
+}
+*/
+
+/*
+for (let numero = 100; numero<=100; numero = numero -10){
+    console.log(numero);
+}
+*/
+
+//for
+/*
+const array = [
+ 'Maria',
+ 'João',
+ 'josé'   
+]
+
+array.forEach(item => {
+    console.log(item)
+})
+*/
+
+//Multiplicação
+// const numeros = [1,2,3,4,5,6,7,8,9,10]
+// let x = 4
+
+// numeros.forEach(item => {
+//     console.log()
+// })
+
+
+// let i = 1;
+// while(i <= 10) {
+//     console.log(i*2)
+//     i = i + 1
+// }
+
+//for
+/*
+for (let i = 1; i <=10; i = i + 1) {
+    console.log(i*2)
+}
+    */
+
+//vingadores
+
+/*
+const numeros = [
+    'Hulk',
+    'Avatar',
+    'Hancock'
+]
+
+numeros.forEach(item => {
+    console.log(item)
+})
+    */
