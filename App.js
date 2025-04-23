@@ -9,7 +9,10 @@ import EditarTarefa from './src/screens/EditTask';
 
 
 const RootStack = createNativeStackNavigator({
-  
+  initialRouteName: "Home",
+  screenOptions:{
+    headerShown: false
+  },
   screens: {
     Home: Home,
     EditarTarefa: EditarTarefa 
