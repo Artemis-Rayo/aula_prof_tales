@@ -1,6 +1,12 @@
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView} from 'react-native';
 import TarefaItem from '../components/TarefaItem';
+import { useNavigation } from '@react-navigation/native';
+
+
 export default function Home(){
+
+    const navigation = useNavigation();
+
     return (
         <View style={styles.container}>
 
@@ -50,7 +56,7 @@ export default function Home(){
             </ScrollView>
             <TouchableOpacity
                 onPress={() => {
-                    alert("Olá!")
+                 navigation.navigate('NovaTarefa')
                 }}
                 style={styles.botaoAdcionar}>
                 <Text style={styles.botaoMais}>+</Text>
