@@ -1,24 +1,36 @@
-import {View, Text, StyleSheet, TextInput} from 'react-native';
+import { View, Text, StyleSheet, TextInput } from 'react-native';
+import { Picker } from '@react-native-picker/picker';
 
-export default function Novatarefa(){
-    return(
-        <View style={styles.container}>
+export default function NovaTarefa() {
+    return (
+        <View>
             <View style={styles.cabecalho}>
-                <Text style={styles.titulo}>ADCIONAR TAREFA</Text>
+                <Text style={styles.titulo}>Adicionar Tarefa</Text>
             </View>
             <View style={styles.body}>
-                <Text style={styles.texto}>Nome da tarefa: </Text>
-                    <TextInput style={styles.TextInput}/>
+                <Text style={styles.texto}>Nome da Tarefa:</Text>
+                <TextInput style={styles.textInput} />
 
-                <Text style={styles.categoria}>Categoria da Tarefa: </Text>
+                <Text style={styles.texto}>Categotia da Tarefa:</Text>
+                <Picker style={styles.textInput}>
+                    <Picker.Item label="Estudo" value="estudo" />
+                    <Picker.Item label="Trabalho" value="trabalho" />
+                    <Picker.Item label="Reunião" value="reuniao" />
+                    <Picker.Item label="Prova" value="prova" />
+                    <Picker.Item label="Aula" value="aula" />
+                </Picker>
 
-                <Text style={styles.texto1}>Descrição da Tarefa:</Text>
-                    <TextInput style={styles.textoTarefa}/>
+                <Text style={styles.texto}>Descrição da Tarefa:</Text>
+                <TextInput
+                    style={styles.textInput}
+                    placeholder='Value'
+                />
+
             </View>
-
         </View>
     )
 }
+
 
 const styles = StyleSheet.create({
     container: {
@@ -28,33 +40,28 @@ const styles = StyleSheet.create({
         backgroundColor: 'blue',
         width: '100%',
         height: 60,
-        justifyContent: 'center',
         flexDirection: 'row',
+        justifyContent: "center",
         alignItems: 'center'
     },
     titulo: {
         color: 'white',
-        fontSize: 20,
-        marginTop: 5,
-        textAlign: 'center',
-        fontWeight: 'bold'
-    },
-    TextInput: {
-        borderWidth: 1,
-        padding: 10,
-        borderColor: '#ccc',
-        backgroundColor: 'white',
-        borderRadius: 10
+        fontSize: 18,
+        fontWeight: 'bold',
+        textAlign: 'center'
     },
     body: {
-        padding: 15,
-        flex: 1,
+        padding: 15
     },
-    textoTarefa:{
+    texto: {
+        marginBottom: 5
+    },
+    textInput: {
         borderWidth: 1,
-        padding: 10,
+        borderRadius: 10,
         borderColor: '#ccc',
+        padding: 10,
         backgroundColor: 'white',
-        borderRadius: 10
+        marginBottom: 15
     }
 });
